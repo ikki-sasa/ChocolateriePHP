@@ -1,0 +1,252 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+nav,
+a {
+    font-family: 'Roboto', sans-serif;
+    color: #503e2a;
+    text-align: center;
+
+}
+
+body {
+    /*background-image: url("../img/choco-slice.jpg");*/
+    background-color: #ffefef;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.3rem;
+}
+
+/*HEADER*****************************************************/
+.nav {
+    width: 100%;
+    background-color: #ffefef;
+}
+
+.nav-content {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 3.5em;
+    background-color: #482620;
+
+}
+
+.nav-item {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+
+}
+
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*nav recherche mon compte panier qui nous sommes*/
+nav>ul>li {
+    float: right;
+    position: relative;
+}
+
+/*nav recherche mon compte panier qui nous sommes*/
+nav>ul>li>a {
+    padding: 5px 10px 5px 10px;
+    color: #d8d8d3;
+    background-color: #482620;
+
+}
+
+/*****/
+nav>ul>li:hover a {
+    padding: 5px 10px 5px 10px;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav li {
+    list-style-type: none;
+    min-width: 5em;
+    /*écart entre les nav côtés*/
+
+}
+
+.submenu {
+    display: none;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f78ead;
+}
+
+nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 10;
+}
+
+.submenu li {
+    border-bottom: 1px solid #CCC;
+    /*couleur grise*/
+
+}
+
+.submenu li a {
+    padding: 20px 30px;
+    font-size: 10px;
+    color: white;
+    /*écriture des produits dans menu*/
+    width: 100%;
+}
+
+/*ONGLET PRODUITS SURVOLE********************************************/
+/*.choco:hover {
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}*/
+
+.submenu {
+    border-top: 5px solid #f390ad;
+    color: white;
+    background-color: #482620;
+    list-style-position: initial;
+    width: max-content;
+
+}
+
+.submenu li:hover a {
+    color: #f390ad;
+    /*rose*/
+    font-weight: bold;
+}
+
+.container {
+    max-width: 510px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/***SLIDER***/
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+
+img.active {
+    /*img possède active enfant*/
+    display: block;
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+
+    /*animation*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.cont-btn {
+    width: 100%;
+    height: auto;
+    border: 1px solid #f390ad;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+
+.apropos {
+    background-position: center;
+    height: 25em;
+    background-image: url("../img/apropos-de-nous-acceuil.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    cursor: pointer;
+    /*effet souris*/
+}
+
+
+/*FOOTER************************************************/
+
+
+/*ABOUT US*************************************************/
+
+.us {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25em;
+    justify-content: center;
+
+}
+
+
+/*VERSION TABLETTE***************************************************/
+
+@media screen and (max-width: 760px) {
+    section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+/*VERSION DESKTOP****************************************************/
+
+@media screen and (max-width: 1200px) {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    article {
+        width: 50%;
+    }
+}
+
+
+/*" data-imgid="46851851" rel="hlid[=]128[&amp;]cpid[=]2075021" onclick="document.location='PBCPPlayer.asp?ID=2075021'"><div class="ox-spacer" style="height: 120px;"></div><div class="ox-text ox-margin-bottom-medium titreQsnEspacePro"><p>Qui sommes nous ?</p></div><div class="ox-spacer" style="height: 15px;"></div><div class="ox-button ox-margin-bottom-medium ox-align-center boutonQsnEspacePro"><a class="btnmain"><span>En savoir plus</span></a></div></div>*/

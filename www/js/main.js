@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    var myvar = setInterval(slideNext, 3000);
+    let inter = setInterval(slideNext, 13000);
     next.addEventListener('click', slideNext);
     preview.addEventListener('click', slidePreview);    
     document.addEventListener('keydown', keyPress);

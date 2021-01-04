@@ -135,7 +135,7 @@ nav li:hover .submenu {
 
 .submenu {
     border-top: 5px solid #f390ad;
-    color: white;
+    color: #CCC;
     background-color: #482620;
     list-style-position: initial;
     width: max-content;
@@ -160,10 +160,15 @@ nav li:hover .submenu {
     display: none;
 }
 
+/*IMAGES SLIDER*/
 img.active {
     /*img possède active enfant*/
     display: block;
     animation: fade 0.8s;
+    width: 250em;
+    height: 25em;
+    background-size: cover;
+    text-align: center;
 }
 
 @keyframes fade {
@@ -178,21 +183,69 @@ img.active {
     }
 }
 
+/*Bouton images slider*/
 .cont-btn {
     width: 100%;
     height: auto;
     border: 1px solid #f390ad;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
+    background-color: #482620;
 }
 
 .btn-nav {
-    font-size: 50px;
-    margin: 0 15px;
+    font-size: 1.5em;
+    margin: 0 6em;
+    cursor: pointer;
+    color: #CCC;
+}
+
+.btn-nav next::before,
+.btn-nav prev::before {
+    font-size: 4rem;
+}
+
+.btn-nav next {}
+
+.btn-nav prev {}
+
+/*SELECTION*/
+/*.selection figure {
+    position: relative;
+}*/
+
+.selection {
+    width: 200%;
+    padding: 20px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-position: center;
+    text-align: center;
     cursor: pointer;
 }
 
+.box {
+    width: 250px;
+    margin: 0 10px;
+    height: 300px;
+    transition: 2s;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #482620;
+}
+
+.box:hover {
+    transform: scale(1.3);
+    z-index: 3;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+}
 
 
 .apropos {
@@ -206,7 +259,7 @@ img.active {
 }
 
 
-/*FOOTER************************************************/
+
 
 
 /*ABOUT US*************************************************/
@@ -219,6 +272,7 @@ img.active {
 
 }
 
+/*FOOTER************************************************/
 
 /*VERSION TABLETTE***************************************************/
 

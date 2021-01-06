@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         
         items[count].classList.add('active');    /*ajout de la classe active */
-        console.log(count); 
+        /*console.log(count);*/ 
     }
 
     function slidePreview() {                       /*Le contriare de la première fonction*/
@@ -40,13 +40,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    let inter = setInterval(slideNext, 13000);
+    var myvar = setInterval(slideNext, 13000);
     next.addEventListener('click', slideNext);
     preview.addEventListener('click', slidePreview);    
     document.addEventListener('keydown', keyPress);
 
 });
-
 
 
 

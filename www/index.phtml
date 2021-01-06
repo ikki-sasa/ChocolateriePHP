@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/icons.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
 
 <body>
@@ -113,7 +115,7 @@
                         <li><a href="products.phtml">Oeuf Noir et Lait</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="#ORANGETTES et CITRONNETTES">ORANGETTES et CITRONNETTES</a>
+                <li class="nav-item"><a href="#ORANGETTES & CITRONNETTES">ORANGETTES & CITRONNETTES</a>
                     <ul class="submenu">
                         <li><a href="products.phtml">Citronnettes</a></li>
                         <li><a href="products.phtml">Gingembrettes</a></li>
@@ -171,7 +173,7 @@
                 Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!
                 </p>Réaliser pop up covid!-->
 
-            <!--SLIDER-->
+            <!--SLIDER START-->
             <div class="slider">
                 <div><img class="active" src="img/boules_noel_slide.jpg" alt="Boules de noel"></div>
                 <div><img src="img/Mendiants_sapin_slide.jpg" alt="Mendiants sapin"></div>
@@ -179,9 +181,15 @@
                 <div><img src="img/pere_noel_slide.jpg" alt="Sabta"></div>
             </div>
             <div class="cont-btn">
-                <div class="btn-nav next"><i class="fas fa-heart"></i></div>
-                <div class="btn-nav prev"><i class="fas fa-heart"></i></div>
+                <div class="btn-nav next"><i class="fas fa-chevron-circle-left"></i></div>
+                <div class="btn-nav prev"><i class="fas fa-chevron-circle-right"></i></div>
             </div>
+            <!--END SLIDER-->
+        </section>
+        <!---->
+        <section>
+
+
 
         </section>
         <!---->
@@ -198,7 +206,7 @@
                     </div>
                     <div class="box">
                         <figure>
-                            <img src="img/Moules-fox.jpg" alt="Les moules">
+                            <img src="img/nos-creations.jpg" alt="Les Artisans">
                             <h3>Nos Créations</h3>
                         </figure>
                     </div>
@@ -212,17 +220,26 @@
             </article>
 
             <article>
-                <div class="picture2">
-                    <figure>
-                        <a target="_blanck" href="about_us.phtml"><img class="apropos"
-                                src="img/apropos-de-nous-acceuil.png">Qui nous sommes?</a>
-                        <!--insérer Qui nous sommes? texte dans la photo et En savoir plus-->
-                        <a target="_blanck" href="about_us.phtml">
-                            <figcaption class="readmore">En savoir plus</figcaption>
-                        </a>
-                    </figure>
+                <div class="post">
+                    <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
+                    <div class="text">
+                        <h4>Qui nous sommes?</h4>
+                        <div class="post-s">
+                            <a target="_blanck" href="about_us.phtml">
+                                <p>Qui nous sommes?</p>
+                            </a>
+                            <div class="btn-more">
+                                <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!--START BUTTON TOP-->
+                <div class="top"></div>
+                <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
+
+                <!--END BUTTON TOP-->
             </article>
 
 
@@ -281,6 +298,8 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.backtotop.js"></script>
+
 </body>
 
 </html>

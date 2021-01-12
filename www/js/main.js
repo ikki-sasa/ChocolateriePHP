@@ -1,8 +1,8 @@
 /*SLIDER*/
 const items = document.querySelectorAll('.slider img');
 const nbSlide = items.length;
-const next = document.querySelector('.right');
-const preview = document.querySelector('.left');
+const next = document.querySelector('.next');
+const preview = document.querySelector('.prev');
 let count = 0;
 
 document.addEventListener('DOMContentLoaded', (event) => {

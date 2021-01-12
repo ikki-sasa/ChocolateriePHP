@@ -1,55 +1,70 @@
-html{
-	font-size: 62.5%;
+html {
+    font-size: 62.5%;
 }
 
 * {
-	box-sizing: border-box;
-	
+    box-sizing: border-box;
+
 }
 
-body{
-	font-size: 1.5em;
-	background-color: rgb(170, 137, 165);
-	text-align: center;
+body {
+    font-size: 1.5em;
+    background-color: rgb(170, 137, 165);
+    text-align: center;
 }
 
-h1, h2{
-	
-	color: black
-}
-ul{
-	list-style-type: none;
-}
-em{
-	color: green;
-}
-span{
-	font-weight: bold;
-}
-strong
-{
-	color: red;
-}
-.addPost{
-	width: 50%;
-	margin: 0 auto;
-}
-.addPost input{
-	margin: 1% 0;
-	display: block;
-	width: 100%;
-	padding: 5px;
+h1,
+h2 {
+
+    color: black
 }
 
-textarea{
-	margin: 1% 0;
-	width: 100%;
-	height: 100px;
+ul {
+    list-style-type: none;
 }
 
-input[type="submit"]{
-	margin: 1%;
-	width: 30%;
-	padding: 2% 0;
-	margin: 0 auto;
+em {
+    color: green;
+}
+
+span {
+    font-weight: bold;
+}
+
+strong {
+    color: red;
+}
+
+.addPost {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.addPost input {
+    margin: 1% 0;
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+textarea {
+    margin: 1% 0;
+    width: 100%;
+    height: 100px;
+}
+
+input[type="submit"] {
+    margin: 1%;
+    width: 30%;
+    padding: 2% 0;
+    margin: 0 auto;
+}
+
+
+.admin-img {
+    min-width: 10em;
+    max-width: 10em;
+    max-height: 10em;
+    min-height: 10em;
+    
 }

@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Les Amoureux du Chocolat/BO</title>
-</head>
-<body>
-	<header>
-		<h1>Les Amoureux du Chocolat/BO</h1>
-	</header>
-	<main>
-		<section>
-			<?php if(empty($products) == false): ?>
-			<h2>Liste de Produits</h2>
-		    <form action="remove.php" method="POST">
-				<ul>
-				    <!-- foreach qui va génerer des li avec les infos  on pourra cocher pour séléctionner la tache à supprimer , on mettra une condition selon la date pour afficher en retard ou en attente-->
-				    <?php foreach($products as $product): ?>
-						<li>
-							<input type='checkbox' name="Id" value="<?= $product['Id'] ?>"/>
-							<img src="<?= $product['Photos']?>"/>
-							<label for="product-<?= $product['Id'] ?>">
-								<span><?= $product['Name'] ?></span> ,
-								<?= $product['Content'] ?> ,
-								<?= $product['ProductDate'] ?> =
-                                <?php if(date_create($product['ProductDate']) < $now): ?>
-                                    <strong> En retard</strong>
-                                <?php else: ?>
-                                	<em>En attente<em>
-                                <?php endif ?>
-							</label>
-						</li>
-					<?php endforeach ?>
-				    <!-- fermeture foreach -->
-				    <li>
-						<input type="submit" value="Supprimer" title="Supprimer les produits sélectionnés">
-					</li>
-				</ul>
-			</form>
-			<hr>
-			<?php endif ?>
-			<h2>Ajouter un produit à la liste</h2>
-			<form action="add.php" method="POST" class="addPost" enctype="multipart/form-data">
-				<input type="text" name="productname" placeholder="Nom du produit">
-				<textarea name="description"></textarea>
-				<input type="file" name="imagechoco">
-				<input type="date" name="date">
-				<input type="submit" name="envoyer" value="Ajouter">
-			</form>
 
-			<hr>
-			<h2>Mise à jour d'un produit</h2>
-			<form action="update.php" method="POST" class="addPost">
-				<select name="postId">
-					<?php foreach($products as $product): ?>
-						<option value="<?= $product['Id'] ?>"><?= $product['Name'] ?></option>
-					<?php endforeach; ?>
-				</select>
-				<input type="text" name="productname" placeholder="Nom du produit">
-				<textarea name="description"></textarea>
-				<input type="date" name="date">
-				<input type="submit" name="envoyer" value="Modifier">
-			</form>
-		</section>
-	</main>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Les Amoureux du Chocolat/BO</title>
+</head>
+
+<body>
+    <header>
+        <h1>Les Amoureux du Chocolat/BO</h1>
+    </header>
+    <main>
+        <section>
+            <?php if(empty($products) == false): ?>
+            <h2>Liste de Produits</h2>
+            <form action="remove.php" method="POST">
+                <ul>
+                    <!-- foreach qui va génerer des li avec les infos  on pourra cocher pour séléctionner la tache à supprimer , on mettra une condition selon la date pour afficher en retard ou en attente-->
+                    <?php foreach($products as $product): ?>
+                    <li>
+                        <input type='checkbox' name="Id" value="<?= $product['Id'] ?>" />
+                        <img class="admin-img" src="<?= $product['Photos']?>" />
+                        <label for="product-<?= $product['Id'] ?>">
+                            <span><?= $product['Name'] ?></span> ,
+                            <?= $product['Content'] ?> ,
+                            <?= $product['ProductDate'] ?> =
+                            <?php if(date_create($product['ProductDate']) < $now): ?>
+                            <strong> En retard</strong>
+                            <?php else: ?>
+                            <em>En attente<em>
+                                    <?php endif ?>
+                        </label>
+                    </li>
+                    <?php endforeach ?>
+                    <!-- fermeture foreach -->
+                    <li>
+                        <input type="submit" value="Supprimer" title="Supprimer les produits sélectionnés">
+                    </li>
+                </ul>
+            </form>
+            <hr>
+            <?php endif ?>
+            <h2>Ajouter un produit à la liste</h2>
+            <form action="add.php" method="POST" class="addPost" enctype="multipart/form-data">
+                <input type="text" name="productname" placeholder="Nom du produit">
+                <textarea name="description"></textarea>
+                <input type="file" name="imagechoco">
+                <input type="date" name="date">
+                <input type="submit" name="envoyer" value="Ajouter">
+            </form>
+
+            <hr>
+            <h2>Mise à jour d'un produit</h2>
+            <form action="update.php" method="POST" class="addPost">
+                <select name="postId">
+                    <?php foreach($products as $product): ?>
+                    <option value="<?= $product['Id'] ?>"><?= $product['Name'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <input type="text" name="productname" placeholder="Nom du produit">
+                <textarea name="description"></textarea>
+                <input type="date" name="date">
+                <input type="submit" name="envoyer" value="Modifier">
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>

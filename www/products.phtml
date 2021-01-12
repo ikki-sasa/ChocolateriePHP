@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Amoureux du Chocolat/ACCEUIL</title>
+    <title>Les Amoureux du Chocolat - Nos produits</title>
     <link rel="icon" href="img/logo_header.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -15,29 +15,49 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/icons.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
+
 
 <body>
     <!--HAUT DE PAGE-->
     <header class="bgtop">
         <!-- <video controls loop> <source src="medias/production ID_5152004.mp4" type="video/mp4"> </video>-->
+        <!--START INFOS HOURS-->
+        <div class="info">
+            <p>Durant le confinement, nous continuons à vous acceuillir aux jours et horaires d'ouverture habituels: du
+                mardi au samedi de 09H30 à 19H30.
+                <!-- Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!-->
 
-        <!--MENUS Login-->
-        <nav>
-            <ul>
-                <!--<li><a href="#">Recherche</a></li>-->
-                <li><a href="about_us.phtml"><i class="fas fa-heart"></i> Qui nous sommes?</a>
-                </li>
-                <li><a href="#"><i class="fas fa-user"></i>Mon compte</a></li>
-                <li><a href="#"><i class="fas fa-shopping-basket"></i> Panier</a></li>
-
-            </ul>
-        </nav>
-
+            </p>
+        </div>
+        <!-- END INFOS HOURS -->
+        <!-- START MENUS LOGIN-->
+        <div class="login">
+            <nav class="nav-login">
+                <ul>
+                    <!--<li><a href="#">Recherche</a></li>-->
+                    <li><a href="about_us.phtml"><i class="fas fa-heart"></i> Qui nous sommes? </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i> Mon compte </a></li>
+                    <li><a href="#"><i class="fas fa-shopping-basket"></i> Panier </a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--END MENUS LOGIN-->
+        <!--LOGO-->
         <div>
             <a href="index.phtml"><img class="logo" src="img/les-amoureux-du-chocolat-logo.jpg"></a>
         </div>
-        <!---->
+        <!--END LOGO-->
+        <!--START SEARCH BAR-->
+        <div class="search">
+            <form action="" method="">
+                <label for="product name">Recherche</label>
+                <input type="text" placeholder=" "><button class="btn-letter" type="submit"><i
+                        class="fas fa-search"></i></button>
+        </div>
+        <!--END SEARCH BAR-->
         <!--MENUS nav Produits-->
         <nav class="nav">
             <ul class="nav-content">
@@ -163,6 +183,10 @@
     <main>
 
 
+        <!--START BUTTON TOP-->
+        <div class="top"></div>
+        <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
+        <!--END BUTTON TOP-->
     </main>
     <footer>
         <div class="lettre">
@@ -200,6 +224,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.backtotop.js"></script>
 </body>
 
 </html>

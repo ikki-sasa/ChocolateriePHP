@@ -228,8 +228,6 @@ header nav ul::after {
 
 
 
-
-
 /*END MENUS nav Produits*/
 
 /*CONTENUE PRINCIPALE*/
@@ -250,14 +248,7 @@ h1 {
 /*SLIDER*/
 /*.slider {}*/
 
-.slider {
-    text-align: center;
 
-}
-
-.slider img {
-    display: none;
-}
 
 /*IMAGES SLIDER*/
 img.active {

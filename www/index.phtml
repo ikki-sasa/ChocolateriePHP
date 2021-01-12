@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/brands.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/solid.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/icons.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -173,17 +173,16 @@
                 Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!
                 </p>Réaliser pop up covid!-->
 
+            <!-- TEST SLICK START -->
+
+            <!-- TEST SLICK END -->
             <!--SLIDER START-->
-            <div class="slider">
-                <div><img class="active" src="img/boules_noel_slide.jpg" alt="Boules de noel"></div>
+            <div class="slider2">
                 <?php foreach($products as $product): ?>
                 <div><img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>"></div>
                 <?php endforeach ?>
             </div>
-            <div class="cont-btn">
-                <div class="btn-nav next"><i class="fas fa-chevron-circle-left"></i></div>
-                <div class="btn-nav prev"><i class="fas fa-chevron-circle-right"></i></div>
-            </div>
+
             <!--END SLIDER-->
         </section>
         <!---->
@@ -302,6 +301,8 @@
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.backtotop.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 </body>
 

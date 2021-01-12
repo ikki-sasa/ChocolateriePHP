@@ -164,10 +164,10 @@ nav ul li a {
 }
 
 
-.nav-item li:hover {
+/*.nav-item li:hover {
     cursor: pointer;
-    
-}
+
+}*/
 
 /*SUR TITRE DE LA NAV*/
 /*.nav-item li a {
@@ -179,7 +179,7 @@ nav ul li a {
     /* display: inline-block;
 }*/
 
-header nav ul li .sous {
+header nav ul li .nav-sub {
     display: none;
     z-index: 1000;
     position: relative;
@@ -187,7 +187,7 @@ header nav ul li .sous {
     width: 100%
 }
 
-header nav ul>li:hover .sous {
+header nav ul>li:hover .nav-sub {
     display: block;
     background-color: #482620;
     width: 100%;
@@ -196,20 +196,20 @@ header nav ul>li:hover .sous {
 }
 
 /* MODIFIER POSITION TEXTE SOUS MENU */
-header nav ul li .sous li {
+header nav ul li .nav-sub li {
     float: none;
     width: 100%;
     vertical-align: middle;
 }
 
 
-header nav ul li .sous a {
+header nav ul li .nav-sub a {
     padding: 10px;
     border-bottom: none;
 }
 
 
-header nav ul li .sous a:hover {
+header nav ul li .nav-sub a:hover {
     border-bottom: none;
     background-color: #204f7f;
 }
@@ -242,6 +242,7 @@ section {
 }
 
 h1 {
+    padding-top: 1.5em;
     padding-bottom: 0.5em;
 }
 
@@ -250,7 +251,7 @@ h1 {
 
 
 
-/*IMAGES SLIDER*/
+/*IMAGES SLIDER A CONSERVER POUR ANIM ET TRANSITION*/
 img.active {
     /*img possède active enfant*/
     display: block;
@@ -279,14 +280,15 @@ img.active {
     background-color: #482620;
 }*/
 
-.cont-btn {
+.slick-prev:before,
+.slick-next:before {
     font-size: 5rem;
     color: #8C6A5B;
     opacity: 0.20;
-    /*#ebe3db LA VRAIE COULEUR */
     cursor: pointer;
-
+    /* padding: 1em; */
 }
+
 
 /*.btn-nav next,
 .btn-nav prev {

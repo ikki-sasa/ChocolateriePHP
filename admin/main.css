@@ -9,14 +9,15 @@ html {
 
 body {
     font-size: 1.5em;
-    background-color: rgb(170, 137, 165);
+    background-color: #f8d9e0;
     text-align: center;
+    color: #503e2a;
 }
 
 h1,
 h2 {
 
-    color: black
+    color: #503e2a;
 }
 
 ul {
@@ -66,5 +67,5 @@ input[type="submit"] {
     max-width: 10em;
     max-height: 10em;
     min-height: 10em;
-    
+
 }

@@ -9,15 +9,18 @@ html {
 
 body {
     font-size: 1.5em;
-    background-color: #f8d9e0;
+    background: url("img/choco-slice.jpg");
+    background-size: contain;
+    /* background-color: #f8d9e0; */
     text-align: center;
     color: #503e2a;
 }
 
-h1,
+h1 {
+    color:#CCC;
+}
 h2 {
-
-    color: #503e2a;
+    color: rgb(192, 137, 146);
 }
 
 ul {

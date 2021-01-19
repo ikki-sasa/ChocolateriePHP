@@ -37,13 +37,15 @@
             <div class="nav-login">
                 <ul class="pogo">
                     <!--<li><a href="#">Recherche</a></li>-->
-                    <li><a href="about_us.php"><i class="fas fa-heart"></i> Qui nous sommes? </a>
-                    </li>
-                    <li><a href="register.php"><i class="fas fa-user"></i> S'enregistrer </a></li>
-                    <li><a href="login.php"><i class="fas fa-user"></i> Connection </a></li>
-                    <li><a href="info.php"><i class="fas fa-user"></i> Mon compte </a></li>
+                    <li><a href="about_us.php"><i class="fas fa-heart"></i> Qui nous sommes? </a></li>
                     <li><a href="#"><i class="fas fa-shopping-basket"></i> Panier </a></li>
-                    <li><a href="#"><i class="fas fa-shopping-basket"></i> Déconexion </a></li>
+                    <?php if (empty($_SESSION['age'])) {?>
+                    <li><a href="login.php"><i class="fas fa-user"></i> Connection </a></li>
+                    <li><a href="register.php"><i class="fas fa-user"></i> S'enregistrer </a></li>
+                    <?php } else {?>
+                    <li><a href="info.php"><i class="fas fa-user"></i> Mon compte <?= $_SESSION['firstName'] ?></a></li>
+                    <li><a href="logout.php"><i class="fas fa-shopping-basket"></i> Déconexion </a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -55,6 +57,14 @@
         <!--END LOGO-->
         <!--START SEARCH BAR-->
         <div class="search">
+            <?php if (array_key_exists( 'role', $_SESSION)) {?>
+            <h1><img class="" src=""></h1>
+            <?php } else { ?>
+            <p>Vous n'êtes pas connectés<img class="img-main" src="img/wifi-off.svg"></p>
+            <a href="login.php">
+                <h2 class="merci-id">Merci de vous Identifiez</h2>
+            </a>
+            <?php } ?>
             <form action="" method="">
                 <label for="product name"></label>
                 <input type="text" placeholder="Recherche"><button class="btn-letter" type="submit">
@@ -170,8 +180,6 @@
             </ul>
         </nav>
     </header>
-
-
     <main class="container">
         <?php include 'www/'.$template.'.phtml';?>
         <!-- include 'www/index.phtml';-->

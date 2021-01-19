@@ -1,92 +1,100 @@
-<section>
-    <h1>La Selection du Moment</h1>
-    <div class="ligne-moment"></div>
-    <!--<article></article>
+	<?php if (array_key_exists( 'role', $_SESSION )) {?>
+
+
+	<section>
+	    <h1>La Selection du Moment</h1>
+	    <div class="ligne-moment"></div>
+	    <!--<article></article>
 
                 Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!
                 </p>Réaliser pop up covid!-->
 
-    <!-- TEST SLICK START -->
+	    <!-- TEST SLICK START -->
 
-    <!-- TEST SLICK END -->
-    <!--SLIDER START-->
-    <div class="slider2">
-        <?php foreach($products as $product): ?>
-        <div><img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>"></div>
-        <?php endforeach ?>
-    </div>
+	    <!-- TEST SLICK END -->
+	    <!--SLIDER START-->
+	    <div class="slider2">
+	        <?php foreach($products as $product): ?>
+	        <div><img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>"></div>
+	        <?php endforeach ?>
+	    </div>
 
-    <!--END SLIDER-->
-</section>
-<!---->
-<section>
+	    <!--END SLIDER-->
+	</section>
+	<!---->
+	<section>
+	</section>
+	<!---->
+	<section>
+	    <h2>Les Amoureux du chocolat</h2>
+	    <article>
+	        <!--SLIDE img-->
+	        <div class="selection">
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Praliné amandesnoisettes lait.jpg" width="260" alt="pralin">
+	                    <h3>Nos Pralinés</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/nos-creations.jpg" width="260" alt="Les Artisans">
+	                    <h3>Nos Créations</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Passion.jpg" width="260" alt="pot">
+	                    <!--Réajuster taille image avec width and heigth-->
+	                    <h3>Nos Délices</h3>
+	                </figure>
+	            </div>
+	        </div>
+	    </article>
+	    <div class="ligne"></div>
+	    <article>
+	        <div class="post">
+	            <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
+	            <div class="text">
+	                <h4>Qui nous sommes?</h4>
+	                <div class="post-s">
+	                    <a target="_blanck" href="about_us.phtml">
+	                        <p>Qui nous sommes?</p>
+	                    </a>
+	                    <div class="btn-more">
+	                        <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
 
-
-
-</section>
-<!---->
-<section>
-    <h2>Les Amoureux du chocolat</h2>
-    <article>
-        <!--SLIDE img-->
-        <div class="selection">
-            <div class="box">
-                <figure>
-                    <img src="img/Praliné amandesnoisettes lait.jpg" width="260" alt="pralin">
-                    <h3>Nos Pralinés</h3>
-                </figure>
-            </div>
-            <div class="box">
-                <figure>
-                    <img src="img/nos-creations.jpg" width="260" alt="Les Artisans">
-                    <h3>Nos Créations</h3>
-                </figure>
-            </div>
-            <div class="box">
-                <figure>
-                    <img src="img/Passion.jpg" width="260" alt="pot">
-                    <!--Réajuster taille image avec width and heigth-->
-                    <h3>Nos Délices</h3>
-                </figure>
-            </div>
-        </div>
-    </article>
-    <div class="ligne"></div>
-    <article>
-        <div class="post">
-            <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
-            <div class="text">
-                <h4>Qui nous sommes?</h4>
-                <div class="post-s">
-                    <a target="_blanck" href="about_us.phtml">
-                        <p>Qui nous sommes?</p>
-                    </a>
-                    <div class="btn-more">
-                        <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--START BUTTON TOP-->
-        <div class="top"></div>
-        <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
-        <!--END BUTTON TOP-->
-    </article>
+	        <!--START BUTTON TOP-->
+	        <div class="top"></div>
+	        <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
+	        <!--END BUTTON TOP-->
+	    </article>
 
 
-</section>
+	</section>
 
 
-<div class="row">
-    <div>
-        <div>
-            <div>
-                <div>
-                    <div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="row">
+	    <div>
+	        <div>
+	            <div>
+	                <div>
+	                    <div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+
+
+
+	<?php } 

@@ -225,7 +225,11 @@ h2 {
 
 /*SLIDER*/
 /*.slider {}*/
-
+.slider2 img {
+    display: block;
+    height: auto;
+    margin: auto;
+}
 
 
 /*IMAGES SLIDER A CONSERVER POUR ANIM ET TRANSITION animation: fade 0.8s;*/
@@ -243,30 +247,6 @@ h2 {
     }
 }
 
-/*Bouton images slider*/
-/*.cont-btn {
-    width: 160%;
-    box-shadow: 0 10px 10px rgba(245, 7, 7, 0.3);
-    background-color: #482620;
-}*/
-
-.slick-prev:before,
-.slick-next:before {
-    font-size: 5rem;
-    color: #8C6A5B;
-    opacity: 0.20;
-    cursor: pointer;
-    /* padding: 1em; */
-}
-
-
-/*.btn-nav next,
-.btn-nav prev {
-    font-size: 1.5em;
-    margin: 0 6em;
-    cursor: pointer;
-    color: #CCC;
-}*/
 
 .btn-nav next::before,
 .btn-nav prev::before {
@@ -281,8 +261,8 @@ h2 {
     position: relative;
 }*/
 .selection {
-    padding: 50px;
-    display: flex;
+    padding: 50px; 
+    display: flex; 
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
@@ -300,6 +280,8 @@ h2 {
 
 .box img {
     display: block;
+    width: 28em;
+    /* padding: 50px; */
     margin: 40px;
     border-radius: 3px;
     background-color: #482620;
@@ -310,6 +292,12 @@ h2 {
     transform: scale(1.1);
     z-index: 3;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+}
+
+h3 {
+    background-color: #8C6A5B;
+    padding: 1em;
+
 }
 
 /*END SELECTION 3 IMAGES*/
@@ -323,26 +311,26 @@ h2 {
 /* SEPARATION LIGNE END*/
 
 /*START ABOUT US**/
-.post {
+/* .post {
 
-    /* width: 750px;
+     width: 750px;
     height: 350px;
     position: relative;
-    cursor: pointer; */
+    cursor: pointer; 
 }
 
 .post img {
-    /* display: block;
+     display: block;
     width: 750px;
-    height: 350px; */
+    height: 350px; 
 }
 
 .post:hover .post-s {
-    /* width: 750px;
+    /width: 750px;
     height: 350px;
     margin-top: -88px;
-    margin-bottom: 10px; */
-}
+    margin-bottom: 10px; 
+} */
 
 .post-s {
     width: 0px;

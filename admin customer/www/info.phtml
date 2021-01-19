@@ -1,7 +1,15 @@
 <div>
-	<h2>Infos :</h2>
-	<p>Nom : <?= $_SESSION['lastName'] ?></p>
-	<p>Prénom : <?= $_SESSION['firstName'] ?></p>
-	<p>Email : <?= $_SESSION['email'] ?></p>
-	<p>Age : <?= $_SESSION['age'] ?></p>
+    <h2>Infos :</h2>
+    <p>Nom : <?= $_SESSION['lastName'] ?></p>
+    <p>Prénom : <?= $_SESSION['firstName'] ?></p>
+    <p>Email : <?= $_SESSION['email'] ?></p>
+    <p>Age : <?= $_SESSION['age'] ?></p>
 </div>
+
+<?php if (empty($_SESSION['role'] !=="admin")) {?>
+
+
+<h1> YO MY MAN </h1>
+
+
+<?php } ?>

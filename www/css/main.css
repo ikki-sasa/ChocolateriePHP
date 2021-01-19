@@ -201,32 +201,11 @@ nav>ul>li:hover .menu {
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
-}
-
-section {
-    text-align: center;
-}
-
-h1 {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-}
-
-.ligne-moment {
-    height: 2em;
-    margin: auto;
-    border-top: 0.2em solid #482620;
-}
-
-h2 {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 2rem;
 }
 
 /*SLIDER*/
 /*.slider {}*/
-
-
 
 /*IMAGES SLIDER A CONSERVER POUR ANIM ET TRANSITION animation: fade 0.8s;*/
 
@@ -244,11 +223,7 @@ h2 {
 }
 
 /*Bouton images slider*/
-/*.cont-btn {
-    width: 160%;
-    box-shadow: 0 10px 10px rgba(245, 7, 7, 0.3);
-    background-color: #482620;
-}*/
+
 
 .slick-prev:before,
 .slick-next:before {
@@ -260,14 +235,6 @@ h2 {
 }
 
 
-/*.btn-nav next,
-.btn-nav prev {
-    font-size: 1.5em;
-    margin: 0 6em;
-    cursor: pointer;
-    color: #CCC;
-}*/
-
 .btn-nav next::before,
 .btn-nav prev::before {
     font-size: 15rem;
@@ -276,13 +243,59 @@ h2 {
 
 /*END SLIDER*/
 
+section {
+    text-align: center;
+}
+
+h2 {
+    max-width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+section img {
+    /*IMAGE EN GLOBALITÉ */
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius: 1.2em;
+    border: none;
+}
+
+.selection img {
+    max-width: 85%;
+    /* padding: 0.5em; */
+    height: auto;
+    /* margin: auto; */
+}
+
+h1 {
+    max-width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+.ligne-moment {
+    height: 2em;
+    margin: auto;
+    border-top: 0.2em solid #482620;
+    padding: 0;
+}
+
+
+
+
+
 /*SELECTION 3 IMAGES*/
 /*.selection figure {
     position: relative;
 }*/
 .selection {
+    max-width: 100%;
     padding: 50px;
-    display: flex;
+    display: -webkit-box;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
@@ -291,18 +304,18 @@ h2 {
 
 .box {
     transition: 1s;
-    top: 50%;
-    bottom: 50%;
-    left: 30%;
-    right: 30%;
+    display: table-cell;
 
 }
 
 .box img {
-    display: block;
+    display: inline-block;
+    /* width: 27em; */
+    padding: auto;
     margin: 40px;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: #482620;
+    text-align: center;
 
 }
 
@@ -312,39 +325,57 @@ h2 {
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
 }
 
+h3 {
+    color: pink;
+    background-color: #8C6A5B;
+}
+
 /*END SELECTION 3 IMAGES*/
 /* SEPARATION LIGNE START*/
 .ligne {
     height: 2em;
     margin: auto;
+    margin-top: 0.5em;
     border-top: 0.2em solid #482620;
 }
 
 /* SEPARATION LIGNE END*/
 
 /*START ABOUT US**/
-.post {
 
-    /* width: 750px;
-    height: 350px;
-    position: relative;
-    cursor: pointer; */
+.post {
+    max-width: auto;
 }
 
 .post img {
-    /* display: block;
-    width: 750px;
-    height: 350px; */
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
-.post:hover .post-s {
-    /* width: 750px;
-    height: 350px;
+/* BOUTON EN SAVOIR PLUS */
+.btn-more a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 22px;
+    background-color: #482620;
+    border: 0.5px solid #482620;
+    color: #CCC;
+    border-radius: 0.3em;
+    text-align: center;
+    padding: 16px 30px;
+
+}
+
+/* .post:hover .post-s {
+    width: 100%;
+    height: auto;
     margin-top: -88px;
-    margin-bottom: 10px; */
-}
+    margin-bottom: 10px; 
+} */
 
-.post-s {
+/*.post-s {
     width: 0px;
     height: 220px;
     background: rgba(255, 224, 234, 0.904);
@@ -354,23 +385,24 @@ h2 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: 3s ease;
-    /*background-position: center;
+    transition: 20s ease;
+    cursor: pointer;
+    background-position: center;
     height: 25em;
     background-image: url("../img/apropos-de-nous-acceuil.png");
     background-repeat: no-repeat;
     background-size: auto;
-    cursor: pointer;
-    effet souris*/
-}
+    
+    effet souris
+}*/
 
 
-.post-s p {
+/* .post-s p {
     color: #482620;
     font-size: 25px;
     padding-bottom: 144px;
     margin-left: 135px;
-}
+} */
 
 
 .text {
@@ -382,24 +414,13 @@ h2 {
 
 .text h4 {
     /*taille/dimension*/
-    text-align: center;
+    /* text-align: center; */
     color: #CCC;
     font-size: 25px;
+    padding: 7em;
 }
 
-.lettre {
-    padding: 40em;
-}
 
-/* BOUTON EN SAVOIR PLUS */
-.btn-more a {
-    font-size: 22px;
-    background-color: #482620;
-    border: 0.5px solid #482620;
-    color: #CCC;
-    position: center;
-
-}
 
 /*END ABOUT US*/
 
@@ -442,8 +463,30 @@ h2 {
 
 /*END BUTTON TOP*/
 
+/* NEWS LETTER START */
+.lettre {
+    padding: 5em;
+}
+
+/* NEWS LETTER END */
+
 /*FOOTER************************************************/
 
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1em;
+    padding: 50px 0 100px;
+}
+
+/* .bloc {
+    width: 100%;
+    margin: 55px 50px 59px 50px;
+
+} */
 
 /*VERSION PHONE
 @media screen and (min-width:) and (max-width: 480px) {

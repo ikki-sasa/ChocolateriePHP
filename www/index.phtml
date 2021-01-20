@@ -1,316 +1,169 @@
-<!DOCTYPE html>
-<html lang="fr">
+	<?php if (array_key_exists( 'role', $_SESSION )) {?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Amoureux du Chocolat - Acceuil</title>
-    <link rel="icon" href="img/logo_header.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/solid.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/icons.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-</head>
-
-<body>
-    <!--HAUT DE PAGE-->
-    <header>
-        <!-- <video controls loop> <source src="medias/production ID_5152004.mp4" type="video/mp4"> </video>-->
-        <!--START INFOS HOURS-->
-        <div class="info">
-            <p>Durant le confinement, nous continuons à vous acceuillir aux jours et horaires d'ouverture habituels: du
-                mardi au samedi de 09H30 à 19H30.
-                <!-- Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!-->
-
-            </p>
-        </div>
-        <!-- END INFOS HOURS -->
-        <!-- START MENUS LOGIN-->
-        <div class="login">
-            <div class="nav-login">
-                <ul class="pogo">
-                    <!--<li><a href="#">Recherche</a></li>-->
-                    <li><a href="about_us.phtml"><i class="fas fa-heart"></i> Qui nous sommes? </a>
-                    </li>
-                    <li><a href="#"><i class="fas fa-user"></i> Mon compte </a></li>
-                    <li><a href="#"><i class="fas fa-shopping-basket"></i> Panier </a></li>
-                </ul>
-            </div>
-        </div>
-        <!--END MENUS LOGIN-->
-        <!--LOGO-->
-        <div class="heart logo">
-            <a href="index.phtml"><img class="logo" src="img/les-amoureux-du-chocolat-logo.png"></a>
-        </div>
-        <!--END LOGO-->
-        <!--START SEARCH BAR-->
-        <div class="search">
-            <form action="" method="">
-                <label for="product name"></label>
-                <input type="text" placeholder="Recherche"><button class="btn-letter" type="submit">
-                    <i class="fas fa-search"></i></button>
-            </form>
-        </div>
-        <!--END SEARCH BAR-->
-        <!--MENUS nav Produits-->
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">CHOCOLAT & FRUITS SECS</a>
-                    <div class="menu">
-                        <a href="products.phtml">Amandines Noir ou Lait</a>
-                        <a href="products.phtml">Chocolat de couverture Noir ou Lait</a>
-                        <a href="products.phtml">Coeurs de biscuit enrobés de chocolat au lait</a>
-                        <a href="products.phtml">Croc'Amande Noir ou Lait</a>
-                        <a href="products.phtml">Croc'Noisette Noir ou lait</a>
-                        <a href="products.phtml">Grignotines</a>
-                        <a href="products.phtml">Mendiants Noir ou Lait</a>
-                        <a href="products.phtml">Noisettes gianduja</a>
-                        <a href="products.phtml">Noisettines Noir Lait ou Blanc praliné</a>
-                        <a href="products.phtml">Palets au grué de cacao</a>
-                        <a href="products.phtml">Palets Cranberry noir</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">NOS COFFRETS & ATELIER</a>
-                    <div class="menu">
-                        <a href="products.phtml">Coffret noir de 16 à 64 Chocolats</a>
-                        <a href="products.phtml">Coffret noir et lait de 16 à 64 Chocolats</a>
-                        <a href="products.phtml">Atelier découverte</a>
-                        <a href="products.phtml">Atelier enfant</a>
-                        <a href="products.phtml">Atelier gourmet</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">CONFISERIES & CONFITES</a>
-                    <div class="menu">
-                        <a href="products.phtml">Assortiment de pâtes de fruits 100g</a><a
-                            href="products.phtml">Assortiment de pâtes de fruits 160g</a>
-                        <a href="products.phtml">Caramels mous fleur de sel framboise sésame</a>
-                        <a href="products.phtml">Guimauves vanille, framboise</a>
-                        <a href="products.phtml">Sucette lait</a>
-                        <a href="products.phtml">Sucette noir</a>
-                        <a href="products.phtml">Clémentines confites one</a>
-                        <a href="products.phtml">Clémentines confitesbox</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">GANACHES & ORANGETTES
-                        CITRONNETTES</a>
-                    <div class="menu">
-                        <a href="products.phtml">Basilic</a>
-                        <a href="products.ph.tml">Café noir</a>
-                        <a href="products.phtml">Citron</a>
-                        <a href="products.phtml">Earl Grey noir</a>
-                        <a href="products.phtml">Framboise</a>
-                        <a href="products.phtml">Jasmin</a>
-                        <a href="products.phtml">L'amoureux noir</a>
-                        <a href="products.phtml">Menthe</a>
-                        <a href="products.phtml">Passion</a>
-                        <a href="products.phtml">Venezuela 72%</a>
-                        <a href="products.phtml">Vietnam 64%</a>
-                        <a href="products.phtml">Citronnettes</a>
-                        <a href="products.phtml">Gingembrettes</a>
-                        <a href="products.phtml">Orangettes</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">MADELEINES BISCUITS & LES PÂTES À TARTINER</a>
-                    <div class="menu">
-                        <a href="products.phtml">Madeleines Noir ou lait</a>
-                        <a href="products.phtml">Madeleines noir</a>
-                        <a href="products.phtml">Biscuits noisette à la pâte à tartiner</a>
-                        <a href="products.phtml">Caramel fleur de sel</a>
-                        <a href="products.phtml">Pâte à tartiner à la noisette Piémont</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">PRALINÉS</a>
-                    <div class="menu">
-                        <a href="products.phtml">Praliné Amandes Lait</a>
-                        <a href="products.phtml">Praliné Amandes & Noisettes Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Praliné Amandes & Noisettes Noir</a>
-                        <a href="products.phtml">Praliné Feuilletine Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Cacahuètes Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Coco Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Feuilletine Lait</a>
-                        <a href="products.phtml">Praliné Noisettes Piémont Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Noix de pécan et fleur de sel</a>
-                        <a href="products.phtml">Praliné Pignons de pin Noir ou Lait</a>
-                        <a href="products.phtml">Praliné Sésame Noir ou Lait</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">TABLETTES & MOULES</a>
-                    <div class="menu">
-                        <a href="products.phtml">Tablette Bali 68%</a>
-                        <a href="products.phtml">Tablette Bélize 75%</a>
-                        <a href="products.phtml">Tablette Grenade 65%</a>
-                        <a href="products.phtml">Tablette lait République Dominicaine 46%</a>
-                        <a href="products.phtml">Tablette Madagascar 50%</a>
-                        <a href="products.phtml">Tablette Madagascar 68%</a>
-                        <a href="products.phtml">Tablette Venezuela 72%</a>
-                        <a href="products.phtml">Tablette Pérou 70%</a>
-                        <a href="products.phtml">Tablette sans sucre 72%</a>
-                        <a href="products.phtml">Tablette Venezuela 100%</a>
-                        <a href="products.phtml">Tablette Vietnam 64%</a>
-                        <a href="products.phtml">Animaux</a>
-                        <a href="products.phtml">Oeuf Noir et Lait</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!---->
-    <!---->
-
-    <!--CONTENUE PRINCIPALE-->
-    <main class="container">
-        <section>
-            <h1>La Selection du Moment</h1>
-            <div class="ligne-moment"></div>
-            <!--<article></article>
+	<section>
+	    <h1>La Selection du Moment</h1>
+	    <div class="ligne-moment"></div>
+	    <!--<article></article>
 
                 Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!
                 </p>Réaliser pop up covid!-->
 
-            <!-- TEST SLICK START -->
+	    <!-- TEST SLICK START -->
 
-            <!-- TEST SLICK END -->
-            <!--SLIDER START-->
-            <div class="slider2">
-                <?php foreach($products as $product): ?>
-                <div><img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>"></div>
-                <?php endforeach ?>
-            </div>
+	    <!-- TEST SLICK END -->
+	    <!--SLIDER START-->
 
-            <!--END SLIDER-->
-        </section>
-        <!---->
-        <section>
+	    <!--center test a modifier-->
+	    <center>
+	        <div class="slider">
+	            <?php foreach($products as $product): ?>
+	            <img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>">
+	            <?php endforeach ?>
+	        </div>
+	    </center>
 
+	    <!--END SLIDER-->
+	</section>
+	<!---->
+	<section>
+	</section>
+	<!---->
+	<section>
+	    <h2>Les Amoureux du chocolat</h2>
+	    <article>
+	        <!--SLIDE img-->
+	        <div class="selection">
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Praliné-amandesnoisettes-lait-redi.jpg" alt="pralin">
+	                    <h3>Nos Pralinés</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Moules-fox-redi" alt="fox">
+	                    <h3>Nos Créations</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Passion.jpg" alt="pot">
+	                    <!--Réajuster taille image avec width and heigth-->
+	                    <h3>Nos Délices</h3>
+	                </figure>
+	            </div>
+	        </div>
+	    </article>
+	    <div class="ligne"></div>
+	    <article>
+	        <div class="post">
+	            <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
+	            <div class="text">
+	                <h4>Qui nous sommes?</h4>
+	                <div class="post-s">
+	                    <a target="_blanck" href="about_us.phtml">
+	                        <p>Qui nous sommes?</p>
+	                    </a>
+	                    <div class="btn-more">
+	                        <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
 
-
-        </section>
-        <!---->
-        <section>
-            <h2>Les Amoureux du chocolat</h2>
-            <article>
-                <!--SLIDE img-->
-                <div class="selection">
-                    <div class="box">
-                        <figure>
-                            <img src="img/Praliné-amandesnoisettes-lait-redi.jpg" alt="pralin">
-                            <h3>Nos Pralinés</h3>
-                        </figure>
-                    </div>
-                    <div class="box">
-                        <figure>
-                            <img src="img/Moules-fox-redi" alt="fox">
-                            <h3>Nos Créations</h3>
-                        </figure>
-                    </div>
-                    <div class="box">
-                        <figure>
-                            <img src="img/Passion.jpg" alt="pot">
-                            <!--Réajuster taille image avec width and heigth-->
-                            <h3>Nos Délices</h3>
-                        </figure>
-                    </div>
-                </div>
-            </article>
-            <div class="ligne"></div>
-            <article>
-                <div class="post">
-                    <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
-                    <div class="text">
-                        <h4>Qui nous sommes?</h4>
-                        <div class="post-s">
-                            <a target="_blanck" href="about_us.phtml">
-                                <p>Qui nous sommes?</p>
-                            </a>
-                            <div class="btn-more">
-                                <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--START BUTTON TOP-->
-                <div class="top"></div>
-                <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
-                <!--END BUTTON TOP-->
-            </article>
-
-
-        </section>
+	        <!--START BUTTON TOP-->
+	        <div class="top"></div>
+	        <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
+	        <!--END BUTTON TOP-->
+	    </article>
 
 
-    </main>
-
-    <!--FOOTER-->
-    <footer>
-        <div class="container-footer">
-            <div class="lettre">
-                <fieldset>
-                    <label for="lettre">Lettre d'informations <i class="fas fa-envelope"></i></label>
-                    <input type="text" id="lettre" placeholder="Saisissez votre adresse e-mail" required>
-                    <button class="btn-letter" type="submit">Envoyer</button>
-                </fieldset>
-            </div>
-            <div class="ligne"></div>
-
-            <div class="bloc footer-conditions">
-                <h4>INFORMATIONS</h4>
-                <ul class="conditions">
-                    <li><a href="#">Mentions légales </a></li>
-                    <li><a href="#">Conditions de livraison </a></li>
-                    <li><a href="#">Conditions générales de vente </a></li>
-                    <li><a href="#">Paiements sécurisés </a></li>
-                    <li><a href="#">Politique d'utilisation des cookies </a></li>
-                </ul>
-            </div>
+	</section>
 
 
 
-            <div class="bloc footer-paiement">
-                <h4>VOS ACHATS</h4>
-                <ul class="paiement">
-                    <li><a href="#">PAIEMENT SÉCURISÉ <i class="fas fa-lock"></i></a></li>
-                    <li><a href="#">CONDITIONS DE LIVRAISON <i class="fas fa-truck"></i></a></li>
-                    <li><a href="#">RETRAIT EN BOUTIQUE <i class="fas fa-store-alt"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="bloc footer-media">
-                <h4>SUIVEZ-NOUS</h4>
-                <ul class="media">
-                    <li> <a target="_blanck" href="https://www.facebook.com/lesamoureuxduchocolat"><i
-                                class="fab fa-facebook"></i></a></li>
-                    <li><a target="_blanck" href="https://www.instagram.com/lesamoureuxduchocolat/"><i
-                                class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-
-            <div>
-                <p>Copyright © 2015 par Les Amoureux du Chocolat. Tous droits réservés. 812 329 936 R.C.S Evry</p>
-            </div>
-        </div>
-    </footer>
-    <!--END of FOOTER-->
-
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.backtotop.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
-</body>
+	<?php } else { ?>
 
-</html>
+
+	<section>
+	    <h1>La Selection du Moment</h1>
+	    <div class="ligne-moment"></div>
+	    <!--<article></article>
+
+                Nous vous remercions par avance pour votre soutien, prenez soin de vous et à bientôt!
+                </p>Réaliser pop up covid!-->
+
+	    <!-- TEST SLICK START -->
+
+	    <!-- TEST SLICK END -->
+	    <!--SLIDER START-->
+	    <center>
+	        <div class="slider">
+	            <?php foreach($products as $product): ?>
+	            <img src="<?= $product['Photos']?>" alt="<?= $product['Name'] ?>">
+	            <?php endforeach ?>
+	        </div>
+	    </center>
+
+	    <!--END SLIDER-->
+	</section>
+	<!---->
+	<section>
+	</section>
+	<!---->
+	<section>
+	    <h2>Les Amoureux du chocolat</h2>
+	    <article>
+	        <!--BOX TROIS IMAGES img-->
+	        <div class="selection">
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Praliné-amandesnoisettes-lait-redi.jpg" alt="pralin">
+	                    <h3>Nos Pralinés</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Moules-fox-redi" alt="fox">
+	                    <h3>Nos Créations</h3>
+	                </figure>
+	            </div>
+	            <div class="box">
+	                <figure>
+	                    <img src="img/Passion.jpg" alt="pot">
+	                    <h3>Nos Délices</h3>
+	                </figure>
+	            </div>
+	        </div>
+	    </article>
+	    <div class="ligne"></div>
+	    <article>
+	        <div class="post">
+	            <a target="_blanck" href="about_us.phtml"><img src="img/choco-bg-ft.jpg"></a>
+	            <div class="text">
+	                <h4>Qui nous sommes?</h4>
+	                <div class="post-s">
+	                    <a target="_blanck" href="about_us.phtml">
+	                        <p>Qui nous sommes?</p>
+	                    </a>
+	                    <div class="btn-more">
+	                        <a target="_blanck" href="about_us.phtml"><span>En savoir plus</span></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <!--START BUTTON TOP-->
+	        <div class="top"></div>
+	        <a id="backtotop"><i class="fas fa-chevron-up"></i></a>
+	        <!--END BUTTON TOP-->
+	    </article>
+
+
+	</section>
+
+
+	< <?php } ?>

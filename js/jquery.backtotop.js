@@ -1,4 +1,5 @@
-jQuery("#backtotop").click(function(){
+/*ARROW UP FLÈCHE VERS LE HAUT */
+jQuery("#backtotop").click(function () {
 	jQuery("body,html").animate({
 		scrollTop:0
 	},600);

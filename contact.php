@@ -6,7 +6,7 @@ session_start();
         // //on appel sa fonction d'ajout
         // $products = $publication->Vuepublication(); // function ok
 
-$template = "about_us";
+$template = "contact";
 include 'layout.phtml';
 
 ?>

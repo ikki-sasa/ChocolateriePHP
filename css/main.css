@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,7 +13,7 @@ html {
 
 h1,
 h2,
-h3,
+h5,
 nav,
 h4,
 a {
@@ -29,6 +31,9 @@ body {
     /*margin: 0;
     padding: 0;*/
     font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+
 }
 
 /*HEADER*****************************************************/
@@ -57,7 +62,7 @@ body {
     background-color: #f8d9e0;
     letter-spacing: 0.2em;
     list-style-type: none;
-    padding: 0;
+    padding-top: 5px;
 }
 
 
@@ -92,10 +97,11 @@ body {
 }
 
 .logo {
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 5px;
 }
 
 /*END LOGO*/
@@ -111,11 +117,21 @@ body {
 
 /*Modification barre de recherche*/
 .search input {
+    padding: 1em 3em;
+    margin: 1em;
+    background-color: #f8d9e0;
+    border: none;
+    outline: none;
+    text-align: center;
     border: none;
     border-radius: 20px;
     color: #8C6A5B;
-
 }
+
+/* .fas fa-search {
+    color:;
+} */
+
 
 .search input:focus {
     border: none;
@@ -142,7 +158,8 @@ ul {
 }
 
 nav ul li {
-    padding: 5px 10px;
+    padding: 5px 10px 38px 10px;
+    text-align: end;
 
 
 }
@@ -161,8 +178,8 @@ nav ul li a {
     width: 100%;
     left: 0;
     right: 0;
-    top: 59px;
-    padding: 30px 15% 40px;
+    top: 75px;
+    padding: 30px 12% 40px;
     text-align: center;
     color: pink;
     /* ordre de priorité pour qu'il passe par dessus les autres éléments */
@@ -275,18 +292,8 @@ h1 {
     padding-top: 1.5em;
     padding-bottom: 0.5em;
     font-size: 2.5em;
+    border-bottom: solid 1px #482620;
 }
-
-.ligne-moment {
-    height: 2em;
-    margin: auto;
-    border-top: 0.2em solid #482620;
-    padding: 0;
-}
-
-
-
-
 
 /*SELECTION 3 IMAGES*/
 /*.selection figure {
@@ -326,20 +333,14 @@ h1 {
 }
 
 h3 {
-    color: pink;
     background-color: #8C6A5B;
+    color: #CCC;
+    border-radius: 10px;
 }
+
 
 /*END SELECTION 3 IMAGES*/
-/* SEPARATION LIGNE START*/
-.ligne {
-    height: 2em;
-    margin: auto;
-    margin-top: 0.5em;
-    border-top: 0.2em solid #482620;
-}
 
-/* SEPARATION LIGNE END*/
 
 /*START ABOUT US**/
 
@@ -470,15 +471,7 @@ h3 {
 
 /*FOOTER************************************************/
 
-footer {
-    flex-shrink: 0;
-    border-top: 0.2em solid #482620;
-    width: 100%;
-    color: #503e2a;
-}
-
-
-
+/*START LA NEWLETTER  */
 footer h4 {
     padding: 1em;
     font-size: 1.5em;
@@ -497,9 +490,10 @@ footer h4 {
     margin: 1em;
     background-color: #f8d9e0;
     border: none;
-    border-radius: 1em;
+    border-radius: 1em 0em 2em 0em;
     outline: none;
     text-align: center;
+    font-size: 1.5em;
 }
 
 input:focus {
@@ -507,38 +501,179 @@ input:focus {
 }
 
 .lettre button {
-    display:inline-block;
+    display: inline-block;
     padding: 15px 32px;
     margin: 4px -17px;
     border: none;
-    border-radius: 1em;
+    border-radius: 1em 0em;
     background-color: #8C6A5B;
     color: #CCC;
     outline: none;
     cursor: pointer;
+    font-size: 1.5em;
+}
+
+.lettre:hover button {
+    color: #CCC;
+    opacity: 0.90;
+}
+
+/*END LA NEWLETTER  */
+
+.contenu {
+    /* grow shrink basis */
+    flex: 1 0 auto;
+}
+
+.contenu p {
+    padding: 5vw 10vw;
+    text-align: justify;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-top: 1px solid #482620;
+    width: 100%;
+    background: #f1f1f1;
+    color: #503e2a;
+}
+
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* font-size: 20px; */
+    padding: 3em 0em 3em 0em;
+    border-top: 1px solid #fadfd4;
+    /* border-bottom: 1px solid #fadfd4; */
+    bottom: 5%;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
 }
 
 
+/* H5 TITLE */
+.footer-information h5,
+.footer-achats h5,
+.footer-medias h5 {
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #482620;
+    text-align: center;
 
-/* 
+}
 
-.lettre {}
+.footer-contact p {
+    padding: 5px 0;
+}
 
-.ligne {}
+/* INFORMATION START */
 
-.bloc footer-conditions {}
+.liste-information,
+.liste-achats,
+.liste-media {
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 0.2em;
+}
 
-.conditions {}
+.liste-information li {
+    padding: 2px 0;
+}
 
-.bloc footer-paiement {}
+.liste-information a {
+    text-decoration: none;
+    color: #503e2a;
+}
 
-.bloc footer-media {} */
+.liste-information a:hover {
+    color: #8C6A5B;
+}
 
-/* .bloc {
+/* INFORMATION END*/
+
+
+/* ACHATS START*/
+.liste-achats li {
+    padding: 2px 0;
+}
+
+.liste-achats a {
+    text-decoration: none;
+    color: #503e2a;
+}
+
+.liste-achats a:hover {
+    color: #8C6A5B;
+}
+
+/* ACHATS END*/
+
+
+/* Medias  BOUGER ICONE FB INSTA*/
+
+.liste-media {
+    position: relative;
+    right: 10px;
+}
+
+.liste-media img {
+    width: 40px;
+    margin: 10px 10px;
+}
+
+.liste-media a {
+    text-decoration: none;
+    /* color: #333; */
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding: 20%
+}
+
+.liste-media a:hover {
+    color: #8C6A5B;
+}
+
+.liste-media fa-facebook {
+    color: #4867aa;
+}
+
+/* MEDIAS END  BOUGER ICONE FB INSTA*/
+
+/* COPY RIGHT START */
+.copyr p {
+    display: inline-block;
+    position: relative;
     width: 100%;
-    margin: 55px 50px 59px 50px;
+    font-size: 9px;
+    background-color: #f8d9e0;
+    color: #8C6A5B;
+    letter-spacing: 0.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* display: inline-block;
+    position:absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 34%;
+    line-height: 70px;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 5em; */
+}
 
-} */
+/* COPY RIGHT END */
+
 
 /*VERSION PHONE
 @media screen and (min-width:) and (max-width: 480px) {

@@ -204,6 +204,11 @@ button,
 select {
     /* 1 */
     text-transform: none;
+    border: none;
+    outline: none;
+    color: #8C6A5B;
+    cursor: pointer;
+    font-size: 2em;
 }
 
 /**

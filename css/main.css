@@ -166,15 +166,16 @@ ul {
 
 nav ul li {
     padding: 5px 45px 50px 10px; /*MODIFICATION 1ER LIGNE NAV*/
-    text-align: end;
+    text-align: center;
     transition: 2s;
     border-top: #482620 solid 1px;
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none;  /*MODIFICATION 2ÈmE LIGNE NAV*/
     color: #482620;
     transition: 2s;
+    text-align: center;
 }
 
 /* GESTION DES SOUS MENUS */

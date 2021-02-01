@@ -22,8 +22,8 @@
             <!-- foreach qui va génerer des li avec les infos  on pourra cocher pour séléctionner la tache à supprimer , on mettra une condition selon la date pour afficher en retard ou en attente-->
             <?php foreach($products as $product): ?>
             <li>
-
-                <center><img class="admin-img" src="<?= $product['Photos']?>"></center>
+                <!-- center a retirer -->
+                <center><img class="admin-img" src="img/<?= $product['Photos']?>"></center>
                 <input type='checkbox' name="Id" value="<?= $product['Id'] ?>" />
                 <label for="product-<?= $product['Id'] ?>">
                     <span><?= $product['Name'] ?></span> <?= $product['Content'] ?> <?= $product['ProductDate'] ?> =
@@ -45,12 +45,13 @@
     <?php endif ?>
     <h2>Ajouter un produit à la liste</h2>
     <form action="add.php" method="POST" class="addPost" enctype="multipart/form-data">
-        <input type="text" name="productname" placeholder="Nom du produit">
+        <input type="text" name="Name" placeholder="Nom du produit">
         <textarea name="description"></textarea>
         <input type="file" name="imagechoco">
         <input type="date" name="date">
         <input type="submit" name="envoyer" value="Ajouter">
     </form>
+
 
     <hr>
     <h2>Mise à jour d'un produit</h2>

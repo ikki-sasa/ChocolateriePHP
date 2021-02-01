@@ -101,9 +101,5 @@ class User {
 		//on redirige vers le login
 		header('Location: login.php');
 		exit();
-	}
-	
-	
-	
-	
+	}	
 }

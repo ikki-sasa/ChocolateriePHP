@@ -12,10 +12,10 @@ include'class/Publication.class.php';
         $publication = new Publication();   //ok
         //on appel sa fonction d'ajout
         $products = $publication->Vuepublication(); //ok
-		
+		// var_dump(http_response_code(404));
 	    //$products=$publication->Updatepublication();     ne fonctionne pas
 	 
-     //   $publication->addpublication( $_POST['Name'],$_POST['Content'],$_POST['ProductDate'],$_POST['Photos'] );  ne fonctionne pas 
+        //$publication->addpublication( $_POST['Name'],$_POST['Content'],$_POST['ProductDate'],$_POST['Photos'] );  //ne fonctionne pas 
 	 
  }else{
 	     //Fonction sup

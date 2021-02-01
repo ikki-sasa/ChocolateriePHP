@@ -15,35 +15,43 @@ class Publication {
 	   //on return le resulta dans la variale products
 			
 		$now = date_create();
+		
 			
-	   return $products;
+	    return $products;
 	}
 		
-		
-		
-/*	
-	  public function addpublication($Name,$Content,$ProductDate,$Photos){
+		// function a retaffer
+	public function addpublication($ProductDate,$Name,$Content,$Photos) {
+        //on instancie notre objet database
+        $database = new Database();
+        //on fait notre requète sql
+        $database->executeSql('
+        INSERT INTO 
+        products(ProductDate,Name,Content,Photos)
+        VALUES 
+        (?,?,?,?)', [$ProductDate,$Name,$Content,$Photos]);
+        //redirection 
+        header('Location: info.php');
+        exit();	
+	}
+
+
+// public function addpublication($Name,$Content,$ProductDate,$Photos){
 		  
 
-$database = new Database();
+// $database = new Database();
 
-//requète d'insertion d'une tâche
- $database->executeSql
-(
-    'INSERT INTO products(Name, Content, ProductDate, Photos)
-	                                                                                      ne fonctionne pas
-    VALUES(?, ?, ?, ?)'[$Name,$Content,$ProductDate,$Photos]
-);
-
+// //requète d'insertion d'une tâche
+//  $database->executeSql
+// (
+//     'INSERT INTO products(Name, Content, ProductDate, Photos)
+// 	                                                                                    --   ne fonctionne pas
+//     VALUES(?, ?, ?, ?)'[$Name,$Content,$ProductDate,$Photos]
+// );		  
 		  
-		  
-		  
-		  
-		
+// 	}
 	
-	  }
 	
-	*/
 	/*
 	 public function Updatepublication(){
 	
@@ -66,7 +74,7 @@ $database = new Database();
 	*/
 	
 	
-	 public function Renovepublication($id){
+	 public function Renovepublication($id) {
 	
 	$database = new Database();
 	
@@ -82,16 +90,16 @@ header('Location: info.php');
 exit();
 	
 	
+}	
 	
-	
-	 }
-	
-	
-	
+ }
 	
 	
 	
-}
+	
+	
+	
+
 	
 	
 	

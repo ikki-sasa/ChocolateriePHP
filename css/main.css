@@ -36,6 +36,11 @@ body {
 
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*HEADER*****************************************************/
 
 /*START INFOS HOURS */
@@ -165,14 +170,16 @@ ul {
 }
 
 nav ul li {
-    padding: 5px 45px 50px 10px; /*MODIFICATION 1ER LIGNE NAV*/
+    padding: 5px 45px 50px 10px;
+    /*MODIFICATION 1ER LIGNE NAV*/
     text-align: center;
     transition: 2s;
     border-top: #482620 solid 1px;
 }
 
 nav ul li a {
-    text-decoration: none;  /*MODIFICATION 2ÈmE LIGNE NAV*/
+    text-decoration: none;
+    /*MODIFICATION 2ÈmE LIGNE NAV*/
     color: #482620;
     transition: 2s;
     text-align: center;
@@ -231,7 +238,10 @@ nav>ul>li:hover .menu {
 }
 
 /*SLIDER*/
-/*.slider {}*/
+.slider {
+    max-width: 40%;
+    height: 10%;
+}
 
 /*IMAGES SLIDER A CONSERVER POUR ANIM ET TRANSITION animation: fade 0.8s;*/
 
@@ -253,19 +263,24 @@ nav>ul>li:hover .menu {
 
 .slick-prev:before,
 .slick-next:before {
-    font-size: 5rem;
+     font-size: 3.5rem; 
     color: #8C6A5B;
     opacity: 0.20;
     cursor: pointer;
-    /* padding: 1em; */
+    /* text-decoration: none;
+    display:inline-block;
+    text-align: center;*/
+
 }
 
 
-.btn-nav next::before,
+/* .btn-nav next::before,
 .btn-nav prev::before {
-    font-size: 15rem;
+    font-size: 50rem;
     color: #ebe3db;
-}
+    padding: 5em;
+
+} */
 
 /*END SLIDER*/
 
@@ -551,13 +566,13 @@ footer {
 }
 
 .contenu-footer {
-    width: 1200px;
-    margin: 0 auto;
+    /* width: 1200px;
+    margin: 0 auto; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     /* font-size: 20px; */
-    padding: 3em 0em 3em 0em;
+    padding: 2em 0em 3em 0em;
     border-top: 1px solid #fadfd4;
     /* border-bottom: 1px solid #fadfd4; */
     bottom: 5%;
@@ -578,7 +593,7 @@ footer {
     color: #482620;
     text-align: center;
     font-weight: 600;
-
+    
 }
 
 .footer-contact p {
@@ -592,7 +607,7 @@ footer {
 .liste-media {
     display: inline-block;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
     line-height: 2em;
     letter-spacing: 0.2em;
 }
@@ -614,13 +629,14 @@ footer {
 
 
 /* ACHATS START*/
-.liste-achats li {
+/* .liste-achats li {
     padding: 2px 0;
-}
+} */
 
 .liste-achats a {
     text-decoration: none;
     color: #503e2a;
+
 }
 
 .liste-achats a:hover {
@@ -654,7 +670,7 @@ i fa-instagram {
     background-color: #e4405f;
 } */
 
-/* A REFAIRE COLEURS ICONES */
+/* A REFAIRE COuLEURS ICONES */
 /* .liste-media :nth-child(1) {
     background: #4867aa;
 }
